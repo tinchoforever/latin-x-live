@@ -49,10 +49,10 @@
        $(function () {
           var socket = io('https://latin-x-map.herokuapp.com/');
           socket.on('new-user', function(msg){
-            alert(msg);
+            alert('new-user',msg);
           });
           socket.on('user-vote', function(msg){
-            alert(msg);
+            alert('user-vote', msg);
           });
         });
 
