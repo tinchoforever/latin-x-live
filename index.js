@@ -32,6 +32,12 @@ io.on('connection', function(socket){
   socket.on('user move', function(msg){
     io.emit('user move', msg);
   });
+  socket.on('new-user', function(msg){
+    io.emit('new-user', msg);
+  });
+  socket.on('user-vote', function(msg){
+    io.emit('user-vote', msg);
+  });
 });
 var port = process.env.PORT || 3000
 http.listen(port, function(){
