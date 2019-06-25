@@ -1,0 +1,477 @@
+
+
+@font-face {
+    font-family: 'American Typewriter';
+    src: url('styles/fonts/AmericanTypewriter-CondensedBold.woff2') format('woff2'),
+        url('styles/fonts/AmericanTypewriter-CondensedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'American Typewriter';
+    src: url('styles/fonts/AmericanTypewriter-CondensedLight.woff2') format('woff2'),
+        url('styles/fonts/AmericanTypewriter-CondensedLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'American Typewriter';
+    src: url('styles/fonts/AmericanTypewriter.woff2') format('woff2'),
+        url('styles/fonts/AmericanTypewriter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'American Typewriter';
+    src: url('styles/fonts/AmericanTypewriter-Light.woff2') format('woff2'),
+        url('styles/fonts/AmericanTypewriter-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'American Typewriter';
+    src: url('styles/fonts/AmericanTypewriter-Condensed.woff2') format('woff2'),
+        url('styles/fonts/AmericanTypewriter-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'American Typewriter';
+    src: url('styles/fonts/AmericanTypewriter-Bold.woff2') format('woff2'),
+        url('styles/fonts/AmericanTypewriter-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    font-family: 'American Typewriter', Arial, sans-serif;
+}
+
+html{
+    background: white;
+    color: #333;
+}
+.vh80 {
+    height: 70vh;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+
+
+.option{
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    background: white;
+    color: #333;
+    height: 100vh;
+}
+
+
+
+.container {
+    padding-left: 2em;
+    padding-right: 2em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+}
+.first-row{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+.second-row{
+    display: flex;
+    padding-top: 2em;
+    align-items: baseline;
+}
+.share-menu{
+
+    text-align: center;
+}
+.btn.share {
+    border-radius: 38px;
+    width: 70px;
+    text-align: center;
+    color: white !important;
+}
+a{
+    color:white;
+}
+.has-margin-top {
+    margin-top: 3em;
+}
+.btn.no-click{
+    cursor: initial;
+}
+.center{
+    text-align: center;
+}
+
+.btn.no-click:hover{
+    color:white;
+}
+a.btn.no-click:hover{
+ color:white;
+}
+strong.btn.no-click:hover{
+    color:white;
+}
+.btn p{
+    margin: 0;
+    /* display: table-cell; */
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 10px;
+}
+h2 small, h6 small, h4 small, h5 small{
+    font-size: 12px;  
+    color:white;
+}
+ul li a {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width : 200px;
+   overflow:hidden;
+   display:inline-block;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+h4{
+    font-size: 1.2em;
+}
+.modal-dialog p{
+    color: #683064;
+    padding: 2em;
+}
+.modal-dialog a{
+    color:#683064;
+}
+.cond{
+    font-weight: 100;
+    font-size: 1.4em;
+}
+.bold{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+h1.cond, h1.bold{
+     font-size: 1.8em;
+}
+a{
+    text-decoration: underline;
+}
+a.btn {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.row-pic{
+    max-height: 60px;
+    margin:0;
+    overflow: hidden;
+}
+.row-pic img{
+    max-width: 124px;
+}
+.row-pic .m{
+    transition: all 700ms;
+}
+h2{
+    font-size: 30px;
+}
+.btn{
+    font-size: 23px;
+    border-color: transparent;
+    white-space: normal;
+    text-transform: uppercase;
+    /* font-weight: 700; */
+    background-color: #9C27B0;
+    color: white;
+    margin: 4px;
+    width: 100%;
+    padding: 20px;
+}
+.btn img, img.icon{
+    width: 50px;
+}
+.btn.high{
+    font-size: 2.25em;
+}
+.btn-primary {
+    background-color: #6bc049;
+}
+
+.logo {
+    padding-left: 2em;
+}
+
+.video {
+    margin-top: 4em;
+}
+
+.set h3 {
+    font-size: 1.2em;
+    padding: 2em 0em 1em 1em;
+}
+
+.set p {
+    padding-left: 1em;
+    font-size: 0.95em;
+    line-height: 1.5;
+    padding-top: 0.75em;
+}
+
+.set a {
+    color: #6cbf48;
+    padding: 1em;
+    text-decoration: underline;
+}
+
+.whatis {
+    background: #82c35b;
+    color: white;
+    margin-top: 3em;
+}
+
+.whatis h3 {
+    padding-left: 2.5em;
+    font-size: 2.3em;
+    padding-top: 4.5em;
+}
+
+.whatis h4 {
+    padding-top: 4em;
+    padding-left: 2em;
+    padding-right: 7em;
+    font-weight: bold;
+}
+
+.whatis img {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.whatis .text {
+    padding-top: 3em;
+}
+
+.whatis .text a {
+    color: white;
+    text-decoration: underline;
+}
+
+.why {
+    padding-bottom: 6em;
+}
+
+.why h3 {
+    padding-left: 2em;
+    font-size: 2.3em;
+    padding-top: 4em;
+    margin-bottom: 2em;
+}
+
+.why ul {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #82c35b;
+    margin-left: 1em;
+}
+
+.why li {
+    margin-bottom: 1.5em;
+}
+
+.why .btn {
+    margin-top: 4em;
+    margin-left: 3em;
+}
+
+.why .text {
+    margin-top: 5em;
+}
+
+.law {
+    background: #82c35b;
+    color: white;
+    padding-bottom: 3em;
+}
+
+.law h3 {
+    padding-top: 4em;
+    font-size: 2.25em;
+    padding-left: 2em;
+}
+
+.law h4 {
+    padding-top: 4em;
+    padding-left: 2em;
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1.7;
+}
+
+.law ul {
+    margin-top: 2em;
+    font-size: 1.1em;
+}
+
+.law li {
+    margin-bottom: 1em;
+}
+
+.law .text {
+    padding-top: 4em;
+}
+
+.law .text a {
+    color: white;
+    text-decoration: underline;
+}
+
+.law .text span {
+    display: inline-block;
+    background: white;
+    color: #82c35b;
+    margin-right: 1em;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    padding-top: 0.25em;
+}
+
+.process {
+    padding-bottom: 3em;
+}
+
+.process h3 {
+    padding-top: 3em;
+    font-size: 2.5em;
+    padding-left: 2em;
+    padding-bottom: 3em;
+}
+
+.process h4 {
+    color: #82c35b;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding-left: 2em;
+    line-height: 1.5;
+}
+
+.process .text {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #82c35b;
+    margin-bottom: 2em;
+}
+
+.process h6 {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background: black;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    color: white;
+}
+
+footer .ongs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .ong {
+    flex: 1;
+}
+
+footer .ong a {
+    display: block;
+}
+
+footer p {
+    margin-top: 3em;
+}
+
+@media (min-width: 768px) {
+    h4{
+        font-size: 1.6em;
+    }
+    .container {
+        max-width: 100%;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .set p {
+        min-height: 7.5em;
+    }
+
+    .set h3 {
+        min-height: 7em;
+    }
+
+    .why .text {
+        margin-top: 15em;
+    }
+
+    .whatis img {
+        margin-left: 1em;
+    }
+
+    .law h4 {
+        padding-right: 10em;
+    }
+
+    .process h4 {
+        padding-right: 7em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1472px;
+    }
+}
