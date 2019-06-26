@@ -9,20 +9,6 @@
                 <div class="col-md-3">
                     <img src="logo.png">
                 </div>
-                <div class="row"> <div class="col-md-6" style="
-                    background: blue;
-                    height: 100vh;
-                "> </div> 
-                <div class="col-md-6" style="
-                    background: red;
-                    height: 100vh;
-                "></div>
-                </div>
-                <div class="col-md-12">
-                    <div class="row" ng-repeat="word in words">
-                        <h2> {{word.key}} <small> {{word.count}} </small> </h2>
-                    </div>
-                </div>
                 <div class="col-md-12">
                     <div class="row">
                             <div class="row-pic" ng-repeat="i in readyToCheck">
@@ -31,6 +17,11 @@
                                     <h2> {{i.votes}}
                                 </div>
                             </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row" ng-repeat="word in words">
+                        <h2> {{word.key}} <small> {{word.count}} </small> </h2>
                     </div>
                 </div>
 
