@@ -29,7 +29,7 @@ angular.module('initApp',['ngRoute', 'ngAnimate'])
 });
  
 new WOW().init();
- var socket = io('http://localhost:3000/');
+ var socket = io('https://latin-x-map.herokuapp.com');
        
            
 /**
