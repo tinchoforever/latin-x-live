@@ -48,6 +48,7 @@ io.on('connection', function(socket){
   });
   socket.on('user-vote', function(msg){
     io.emit('user-vote', msg);
+    console.log('LatinX',  msg.filename );
     var lx = new LatinX({ filename: msg.filename });
     lx.save();
 
