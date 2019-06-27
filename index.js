@@ -14,12 +14,6 @@ var mongoose = require ("mongoose"); // The reason for this demo.
     process.env.MONGOHQ_URL ||
     'mongodb://localhost/HelloMongoose';
 
-
-var Cat = mongoose.model('Cat', { name: String });
-var kitty = new Cat({ name: 'Zildjian' });
-
-
-kitty.save().then(() => console.log('meow'));
 app.use("/", express.static(path.join(__dirname, "public")));
 
 
@@ -55,7 +49,7 @@ io.on('connection', function(socket){
   socket.on('user-vote', function(msg){
     io.emit('user-vote', msg);
     var lx = new LatinX({ filename: msg.filename });
-    lx.save().then(() => console.log('lx'));
+    lx.save();
 
   });
 });
