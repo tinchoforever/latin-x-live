@@ -1,4 +1,6 @@
 'use strict';
+//Create a new instance of the word cloud visualisation.
+var myWordCloud;
 
 angular.module('initApp')
   .controller('mainController', function ($scope, $rootScope, $location) {
@@ -25,6 +27,7 @@ angular.module('initApp')
                      $scope.words.map(function(ww){
                        if (w == ww.key){
                          ww.count++;
+                         ww.size = ww.count ;
                        }
                      })
                   })
@@ -38,7 +41,15 @@ angular.module('initApp')
                 var z = $rootScope.readyToCheck[i];
                 z.percentage = z.votes * 80 / $scope.max;
               }
-
+              var totalWords=0;
+              $scope.words.map(function(w){
+                totalWords +=w.count;
+              })
+               $scope.words.map(function(w){
+                 var p = w.count * 100 / totalWords
+                 w.fontSize = p* 100/20;
+               });
+              myWordCloud.update($scope.words.filter(word => word.size > 0))
               
              });
           });
@@ -58,6 +69,7 @@ angular.module('initApp')
             });
             
             $rootScope.readyToCheck.push(d);
+
         });
         
         $scope.words= d3.nest()
@@ -67,35 +79,18 @@ angular.module('initApp')
               .entries($scope.words);
        $scope.words = $scope.words.map(function(w){
          w.count = 0;
+         w.size = 0;
+         w.text = w.key;
          return w;
        });
        console.log($scope.words);
       });
     });
-    setTimeout(function(){
-//Create a new instance of the word cloud visualisation.
-var myWordCloud = wordCloud('word-cloud');
-
-},2000);
 
 setTimeout(function(){
 //Create a new instance of the word cloud visualisation.
-var myWordCloud = wordCloud('word-cloud');
+myWordCloud = wordCloud('.word-cloud');
 //Start cycling through the demo data
-showNewWords(myWordCloud);
-
-//This method tells the word cloud to redraw with a new set of words.
-//In reality the new words would probably come from a server request,
-// user input or some other source.
-function showNewWords(vis, i) {
-    i = i || 0;
-
-    vis.update(getWords(i ++ % words.length))
-    setTimeout(function() { showNewWords(vis, i + 1)}, 2000)
-}
-
-
-
 },8000);
 
 });
