@@ -62,7 +62,7 @@ angular.module('initApp')
                  var p = w.count * 100 / totalWords
                  w.fontSize = p* 100/20;
                });
-              myWordCloud.update($scope.words.filter(word => word.size > 0))
+              // myWordCloud.update($scope.words.filter(word => word.size > 0))
               
              });
           });
@@ -97,15 +97,15 @@ angular.module('initApp')
          w.text = w.key;
          return w;
        });
-       console.log($scope.words);
+
       });
     });
 
-setTimeout(function(){
-//Create a new instance of the word cloud visualisation.
-myWordCloud = wordCloud('.word-cloud');
-//Start cycling through the demo data
-},8000);
+// setTimeout(function(){
+// //Create a new instance of the word cloud visualisation.
+// myWordCloud = wordCloud('.word-cloud');
+// //Start cycling through the demo data
+// },8000);
 
 });
 
