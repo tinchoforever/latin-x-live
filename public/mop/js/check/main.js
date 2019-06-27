@@ -72,5 +72,32 @@ angular.module('initApp')
        console.log($scope.words);
       });
     });
+    setTimeout(function(){
+//Create a new instance of the word cloud visualisation.
+var myWordCloud = wordCloud('word-cloud');
+
+},2000);
+
+setTimeout(function(){
+//Create a new instance of the word cloud visualisation.
+var myWordCloud = wordCloud('word-cloud');
+//Start cycling through the demo data
+showNewWords(myWordCloud);
+
+//This method tells the word cloud to redraw with a new set of words.
+//In reality the new words would probably come from a server request,
+// user input or some other source.
+function showNewWords(vis, i) {
+    i = i || 0;
+
+    vis.update(getWords(i ++ % words.length))
+    setTimeout(function() { showNewWords(vis, i + 1)}, 2000)
+}
+
+
+
+},8000);
 
 });
+
+
