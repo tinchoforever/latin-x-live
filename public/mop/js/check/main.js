@@ -41,6 +41,19 @@ angular.module('initApp')
                 var z = $rootScope.readyToCheck[i];
                 z.percentage = z.votes * 80 / $scope.max;
               }
+              var cp = [];
+              angular.copy($rootScope.readyToCheck, cp);
+              cp.sort(function(a,b){
+                 return d3.descending(a.votes, b.votes);
+              });
+              cp.map(function(m,i){
+                $rootScope.readyToCheck.map(function(r){
+                  if (m.filename === r.filename){
+                    r.order = i;
+                  }  
+                });
+              });
+                
               var totalWords=0;
               $scope.words.map(function(w){
                 totalWords +=w.count;
@@ -57,8 +70,9 @@ angular.module('initApp')
       $rootScope.$apply(function(){
         $rootScope.checks = data;
         $rootScope.readyToCheck = [];
-        data.map(function(d){
+        data.map(function(d,i){
             d.votes = 0;
+            d.order = i;
             d.percentage = 0;
             d.words = d.tags.split(',').map(function(tag){
               tag = tag.replace('#','').trim();

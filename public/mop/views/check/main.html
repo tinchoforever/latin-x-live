@@ -11,10 +11,10 @@
                 </div>
                 <div class="col-md-12">
                     <div class="row">
-                            <div class="row-pic" ng-repeat="i in readyToCheck ">
-                                <div class="m" style="margin-left: {{i.percentage}}%;">
-                                    <img src="images/{{i.filename}}">
-                                    <h2> {{i.votes}}
+                            <div class="row-pic" style="top:{{z.order*50}}px" ng-repeat="z in readyToCheck ">
+                                <div class="m" style="margin-left: {{z.percentage}}%;">
+                                    <img src="images/{{z.filename}}">
+                                    <h2> {{z.votes}}
                                 </div>
                             </div>
                     </div>
