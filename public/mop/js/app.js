@@ -6,7 +6,7 @@ angular.module('initApp',['ngRoute', 'ngAnimate'])
   }])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/main', {
         templateUrl: 'views/check/main.html',
         controller: 'mainController'
       })
@@ -26,6 +26,12 @@ angular.module('initApp',['ngRoute', 'ngAnimate'])
         templateUrl: 'views/check/stats.html',
         controller: 'statsController'
       })
+      .when('/', {
+        templateUrl: 'views/check/result.html',
+        controller: 'resultController'
+      })
+
+
 });
  
 new WOW().init();
