@@ -64,6 +64,12 @@ io.on('connection', function(socket){
 
   });
 });
+
+app.get('/users', function(req, res){
+   LatinX.find({}, function(err, users) {
+               res.json(users)
+        });
+});
 var port = process.env.PORT || 3000
 http.listen(port, function(){
   console.log('listening on *:3000');
