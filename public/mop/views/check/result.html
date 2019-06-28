@@ -1,0 +1,30 @@
+	<div class="container">
+            <div class="row">
+            	<div class="col-xs-4">
+                	<h1><span class="cond">LATIN</span><span class="bold">X</span><small> SI/NO </small></h1>
+                </div>
+                <div class="col-xs-4">
+                    <h1> 👪 {{players}} / 🗳 {{votes}}  </h1>
+                    <h3> Vota entrando con tu telefono a <strong> bit.ly/latinx-mm </strong> </h3>
+                </div>
+                <div class="col-xs-3">
+                    <img src="logo.png">
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                            <div class="row-pic" style="top:{{z.order*50}}px" ng-repeat="z in readyToCheck ">
+                                <div class="m" style="margin-left: {{z.percentage}}%;">
+                                    <img src="images/{{z.filename}}">
+                                    <h2> {{z.votes}}
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="word-cloud"></div>
+                </div>
+
+            </div>
+                
+</div>
+
