@@ -115,8 +115,8 @@ angular.module('initApp')
        });
 
 
-       startExperience();
-
+         startExperience();
+       
 
 
       });
@@ -131,4 +131,4 @@ angular.module('initApp')
 //Create a new instance of the word cloud visualisation.
 myWordCloud = wordCloud('.word-cloud');
 //Start cycling through the demo data
-},400);
+},4000);
