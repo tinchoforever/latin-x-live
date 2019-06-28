@@ -28,8 +28,10 @@ angular.module('initApp')
       alert(msg);
       console.log(msg);
     }
-    var countVote = function(msg){
-      $scope.votes++;
+    var countVote = function(all){
+
+      all.map(function(msg){
+        $scope.votes++;
               for (var i = 0; i < $rootScope.readyToCheck.length; i++) {
                 var z = $rootScope.readyToCheck[i];
                 if (z.filename === msg.filename){
@@ -73,7 +75,9 @@ angular.module('initApp')
                $scope.words.map(function(w){
                  var p = w.count * 100 / totalWords
                  w.fontSize = p* 100/20;
-               });
+               });  
+      })
+      
               // myWordCloud.update($scope.words.filter(word => word.size > 0))
     }
 
