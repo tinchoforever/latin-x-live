@@ -30,7 +30,7 @@ angular.module('initApp')
     }
     var countVote = function(all){
 
-      all.map(function(msg){
+      all.data.map(function(msg){
         $scope.votes++;
               for (var i = 0; i < $rootScope.readyToCheck.length; i++) {
                 var z = $rootScope.readyToCheck[i];
@@ -78,7 +78,7 @@ angular.module('initApp')
                });  
       })
       
-              // myWordCloud.update($scope.words.filter(word => word.size > 0))
+       myWordCloud.update($scope.words.filter(word => word.size > 0))
     }
 
    var socket = io('https://latin-x-map.herokuapp.com');
@@ -122,12 +122,13 @@ angular.module('initApp')
       });
     });
 
-// setTimeout(function(){
-// //Create a new instance of the word cloud visualisation.
-// myWordCloud = wordCloud('.word-cloud');
-// //Start cycling through the demo data
-// },8000);
+
 
 });
 
 
+      setTimeout(function(){
+//Create a new instance of the word cloud visualisation.
+myWordCloud = wordCloud('.word-cloud');
+//Start cycling through the demo data
+},400);
