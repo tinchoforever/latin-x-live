@@ -101,11 +101,11 @@ angular.module('initApp')
       });
     });
 
-// setTimeout(function(){
-// //Create a new instance of the word cloud visualisation.
-// myWordCloud = wordCloud('.word-cloud');
-// //Start cycling through the demo data
-// },8000);
+setTimeout(function(){
+//Create a new instance of the word cloud visualisation.
+myWordCloud = wordCloud('.word-cloud');
+//Start cycling through the demo data
+},8000);
 
 });
 
